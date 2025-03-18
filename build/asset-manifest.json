@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.db72befd.css",
-    "main.js": "/static/js/main.42691d73.js",
+    "main.css": "/static/css/main.40d3b906.css",
+    "main.js": "/static/js/main.c87ea4f4.js",
     "static/media/ArtificalIntelligence.jpg": "/static/media/ArtificalIntelligence.6b00183d58fe4fe40149.jpg",
     "static/media/logo_3.jpg": "/static/media/logo_3.cff471940cd7c4db7186.jpg",
     "static/media/cloudComputing.jpg": "/static/media/cloudComputing.b7bf0aef304a0f7a197f.jpg",
@@ -20,11 +20,11 @@
     "static/media/csm_logo.png": "/static/media/csm_logo.545dad2f41c61d702868.png",
     "static/media/coe_logo.png": "/static/media/coe_logo.c996fbc592bd0022c9f5.png",
     "index.html": "/index.html",
-    "main.db72befd.css.map": "/static/css/main.db72befd.css.map",
-    "main.42691d73.js.map": "/static/js/main.42691d73.js.map"
+    "main.40d3b906.css.map": "/static/css/main.40d3b906.css.map",
+    "main.c87ea4f4.js.map": "/static/js/main.c87ea4f4.js.map"
   },
   "entrypoints": [
-    "static/css/main.db72befd.css",
-    "static/js/main.42691d73.js"
+    "static/css/main.40d3b906.css",
+    "static/js/main.c87ea4f4.js"
   ]
 }
