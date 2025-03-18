@@ -25,7 +25,7 @@ import { Schedule_meet_link, Policies } from "../../../assets/links";
 const services = [
   {
     title: "IIITD Innovation and Incubation Center",
-    shortName: "IIITD-IC",
+    shortName: "IIITD - IIC",
     description:
       "Supporting early-stage startups with comprehensive resources and mentorship.",
     offeringsTitle: "OFFERINGS:",
@@ -73,111 +73,240 @@ const services = [
   },
 ];
 
+// STARTUP FACILIATION
+
 const faqs = [
   {
-    question: "How can I schedule a meeting with an innovation expert?",
+    question: "Who can benefit from the startup facilitation services?",
     answer:
-      "You can schedule a meeting by clicking the 'Schedule a Meeting' button above or by contacting our office directly. We'll match you with the most suitable expert for your needs.",
+      "Our services cater to aspiring entrepreneurs, startups, and existing businesses looking to innovate and grow.",
   },
   {
-    question: "What types of workshops do you offer?",
+    question: "How do I join the Entrepreneurship Cell (ECELL)?",
     answer:
-      "We offer a wide range of workshops including ideation sessions, intellectual property protection, product development, market research, and entrepreneurship basics.",
+      "To join ECELL, participate in our events, workshops, and community gatherings. Connect with us through our platform or attend our networking sessions.",
   },
   {
-    question: "Can students participate in all events?",
+    question: "What resources does the Innovation Hub (IHUB) provide for startups?",
     answer:
-      "Yes! All our events are open to students, faculty members, and external entrepreneurs. Some specialized events might have specific eligibility criteria.",
+      "IHUB offers a collaborative workspace, access to prototyping tools, and a community of innovators. It provides an environment conducive to ideation and experimentation.",
   },
   {
-    question: "How do you help connect with industry partners?",
+    question: "How can I get incubation support from IITDIC?",
     answer:
-      "We maintain strong relationships with industry leaders and organize regular networking events, mentorship programs, and partnership opportunities.",
+      "Reach out to the IITDIC team through the provided channels to inquire about incubation support. Share details about your startup, and they will guide you through the application process.",
+  },
+  {
+    question: "Are the mentorship programs tailored to specific industries?",
+    answer:
+      "Yes, our mentorship programs are customized to cater to diverse industries. We match startups with mentors who have expertise relevant to their business.",
+  },
+  {
+    question: "What is the Technology Licensing and Research Commercialization program, and who can benefit from it?",
+    answer:
+      "The program is designed to turn innovative ideas into real-world solutions. It benefits businesses looking to innovate, researchers aiming to make an impact, and anyone interested in collaborative opportunities.",
+  },
+  {
+    question: "How can I access innovation through the program?",
+    answer:
+      "Explore our rich portfolio of intellectual assets, from patents to software, ready for licensing and collaboration. Details on available innovations can be found on our platform.",
+  },
+  {
+    question: "What are the benefits of forging strategic partnerships within the program?",
+    answer:
+      "Forge powerful alliances with our network of industry leaders, researchers, and entrepreneurs. Collaborative partnerships can enhance your innovation journey and open doors to new opportunities.",
+  },
+  {
+    question: "How does Intellectual Property Management safeguard my ideas within the program?",
+    answer:
+      "Our expert IP management ensures that your ideas remain protected throughout the licensing and commercialization process, providing a secure environment for your innovations.",
+  },
+  {
+    question: "What kind of commercialization support is provided in the program?",
+    answer:
+      "Receive comprehensive guidance to turn research breakthroughs into successful products and services. Our support covers various aspects of commercialization, from strategy development to market entry.",
+  },
+  {
+    question: "Are there funding opportunities available through the program?",
+    answer:
+      "Yes, tap into diverse funding sources and grants to accelerate your innovation journey. We provide information and assistance on securing funding opportunities relevant to your project.",
+  },
+  {
+    question: "How can I join the entrepreneurial ecosystem mentioned in the program?",
+    answer:
+      "Join the vibrant community of innovators, startups, and mentors we enjoy. Connect with us through the provided channels, and we'll guide you on becoming part of the entrepreneurial ecosystem.",
+  },
+  {
+    question: "Is there a cost associated with accessing the intellectual assets for licensing?",
+    answer:
+      "The costs associated with accessing intellectual assets for licensing may vary. Details on licensing fees and terms can be obtained by reaching out to our licensing and commercialization team.",
+  },
+  {
+    question: "How can businesses benefit specifically from the program?",
+    answer:
+      "Businesses can benefit by accessing cutting-edge technologies for licensing, forging strategic partnerships, receiving commercialization support, and tapping into funding opportunities to drive innovation and growth.",
+  },
+  {
+    question: "Can individual researchers participate in the program, or is it exclusive to businesses?",
+    answer:
+      "The program is open to both individual researchers and businesses. Whether you're a solo innovator or part of a larger organization, we welcome your participation and collaboration.",
+  },
+  {
+    question: "How can I stay updated on available intellectual assets and collaboration opportunities?",
+    answer:
+      "Regularly check our platform for updates on available intellectual assets, collaboration opportunities, and announcements related to the Technology Licensing and Research Commercialization program.",
+  },
+  {
+    question: "Is there a specific application process to join the program, and how can I get started?",
+    answer:
+      "Contact our team through the provided channels to inquire about joining the program. We'll guide you through any application process and provide the necessary information to get started.",
   },
 ];
 
 const ServiceCard = ({ service }) => {
   const Icon = service.icon;
-
+  
   return (
-    <Card className="start-service-card">
+    <Card 
+      sx={{ 
+        height: '100%',
+        borderRadius: 3,
+        overflow: 'visible',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
+        transition: 'all 0.3s ease',
+        position: 'relative',
+        border: '1px solid #f0f0f0',
+        display: 'flex',
+        flexDirection: 'column',
+        '&:hover': {
+          transform: 'translateY(-10px)',
+          boxShadow: '0 15px 35px rgba(0,0,0,0.12)',
+        }
+      }}
+    >
       {/* Top accent bar with color */}
-      <Box
-        className="start-service-card-accent"
-        style={{
+      <Box 
+        sx={{ 
+          height: '8px', 
+          width: '100%', 
           background: `linear-gradient(90deg, ${service.color} 0%, ${service.color}CC 100%)`,
+          borderTopLeftRadius: 12,
+          borderTopRightRadius: 12,
         }}
       />
 
       {/* Icon floating above card */}
-      <Box
-        className="start-service-card-icon"
-        style={{
-          backgroundColor: service.color,
+      <Box 
+        sx={{ 
+          position: 'absolute',
+          top: '-25px',
+          right: '25px',
+          bgcolor: service.color,
+          color: 'white',
+          p: 1.5,
+          borderRadius: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
           boxShadow: `0 4px 14px ${service.color}40`,
-          border: "2px solid white",
+          width: 50,
+          height: 50,
+          border: '2px solid white'
         }}
       >
         <Icon fontSize="medium" />
       </Box>
 
-      <CardContent className="start-service-card-content">
+      <CardContent 
+        sx={{ 
+          p: 3, 
+          pt: 4, 
+          display: 'flex', 
+          flexDirection: 'column',
+          height: '100%'
+        }}
+      >
         {/* Service Header with fixed height */}
-        <Box className="start-service-card-header">
-          <Chip
-            label={service.shortName}
-            size="small"
-            className="start-service-card-chip"
-            style={{
-              backgroundColor: `${service.color}15`,
+        <Box sx={{ mb: 3, height: '160px' }}>
+          <Chip 
+            label={service.shortName} 
+            size="small" 
+            sx={{ 
+              mb: 2, 
+              backgroundColor: `${service.color}15`, 
               color: service.color,
-            }}
+              fontWeight: 600,
+              border: 'none'
+            }} 
           />
-          <Typography variant="h5" className="start-service-card-title">
+          <Typography variant="h5" sx={{ fontWeight: 700, mb: 2, fontSize: '1.4rem' }}>
             {service.title}
           </Typography>
-          <Typography variant="body2" className="start-service-card-description">
+          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
             {service.description}
           </Typography>
         </Box>
 
         {/* Offerings title */}
-        <Typography
-          variant="subtitle2"
-          className="start-service-card-offerings-title"
-          style={{ color: service.color }}
+        <Typography 
+          variant="subtitle2" 
+          sx={{ 
+            fontWeight: 'bold',
+            color: service.color,
+            fontSize: '0.9rem',
+            mb: 2,
+            letterSpacing: '0.5px'
+          }}
         >
           {service.offeringsTitle}
         </Typography>
 
         {/* Bullet Points with fixed height container */}
-        <Box className="start-service-card-bullet-points">
+        <Box sx={{ mb: 3, flex: 1, minHeight: '250px' }}>
           {service.bulletPoints.map((point, i) => (
-            <Box
-              key={i}
-              className="start-service-card-bullet-point"
-              style={{ "&:hover": { backgroundColor: `${service.color}10` } }}
-            >
-              <CheckCircle
-                className="start-service-card-bullet-icon"
-                style={{
-                  color: service.color,
-                  filter: `drop-shadow(0 1px 2px ${service.color}30)`,
-                }}
-              />
+            <Box key={i} sx={{ 
+              display: 'flex', 
+              alignItems: 'flex-start', 
+              mb: 2,
+              p: 1,
+              borderRadius: 1,
+              '&:hover': {
+                backgroundColor: `${service.color}10`
+              }
+            }}>
+              <CheckCircle sx={{ 
+                color: service.color, 
+                mr: 1.5, 
+                fontSize: '1.2rem', 
+                mt: 0.3,
+                minWidth: '1.2rem', // Fixed width for icon
+                filter: `drop-shadow(0 1px 2px ${service.color}30)`
+              }} />
               <Typography variant="body2">{point}</Typography>
             </Box>
           ))}
         </Box>
-
+        
         {/* Learn More Button */}
-        <Box className="start-service-card-button-container">
-          <Button
-            variant="text"
+        <Box sx={{ mt: 'auto', alignSelf: 'flex-start' }}>
+          <Button 
+            variant="text" 
             endIcon={<ArrowForward />}
             href={service.link}
-            className="start-service-card-button"
-            style={{ color: service.color }}
+            sx={{ 
+              color: service.color,
+              fontWeight: 500,
+              borderRadius: 2,
+              '&:hover': {
+                backgroundColor: `${service.color}10`,
+                '& .MuiButton-endIcon': {
+                  transform: 'translateX(4px)'
+                }
+              },
+              '& .MuiButton-endIcon': {
+                transition: 'transform 0.3s ease'
+              }
+            }}
           >
             Learn more
           </Button>
@@ -186,6 +315,9 @@ const ServiceCard = ({ service }) => {
     </Card>
   );
 };
+
+
+
 
 const StartupFacilitationPage = () => {
   return (

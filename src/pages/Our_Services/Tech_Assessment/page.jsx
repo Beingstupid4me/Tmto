@@ -45,37 +45,66 @@ const services = [
   },
   {
     title: "Smart Resourcing",
-    description: "Shows you how to use your money and materials wisely.",
+    description: "Shows you how to use your resources wisely.",
     icon: LightbulbOutlined,
   },
   {
     title: "Strategic Choice",
     description: "Helps you decide which projects are worth focusing on.",
     icon: LightbulbOutlined,
-  },
-  {
-    title: "Ready to Scale",
-    description: "Points out which technologies are ready to be turned into products and sold to a lot of people.",
-    icon: LightbulbOutlined,
   }
 ];
 
+// TECH ASSESSMENT
+
 const faqs = [
   {
-    question: "How can I schedule a meeting with an innovation expert?",
-    answer: "You can schedule a meeting by clicking the 'Schedule a Meeting' button above or by contacting our office directly. We'll match you with the most suitable expert for your needs."
+    question: "What is a Technology Maturity Assessment, and why is it important?",
+    answer: "A Technology Maturity Assessment is a comprehensive evaluation process that determines the readiness of a technology or innovation for real-world applications. It is crucial for understanding where your innovations stand on the path to success."
   },
   {
-    question: "What types of workshops do you offer?",
-    answer: "We offer a wide range of workshops including ideation sessions, intellectual property protection, product development, market research, and entrepreneurship basics."
+    question: "Who can benefit from a Technology Maturity Assessment?",
+    answer: "Both startups looking to attract investors and established companies seeking to diversify can benefit from a Technology Maturity Assessment to navigate the journey from concept to market success."
   },
   {
-    question: "Can students participate in all events?",
-    answer: "Yes! All our events are open to students, faculty members, and external entrepreneurs. Some specialized events might have specific eligibility criteria."
+    question: "What does the assessment process involve?",
+    answer: "The assessment process involves a systematic analysis of various factors to gauge the current state and future prospects of a technology. It provides a roadmap for realizing the full potential of innovations."
   },
   {
-    question: "How do you help connect with industry partners?",
-    answer: "We maintain strong relationships with industry leaders and organize regular networking events, mentorship programs, and partnership opportunities."
+    question: "What is Technology Readiness Level (TRL), and why is it important?",
+    answer: "TRL is a measure of the maturity of a technology, ranging from concept (TRL 1) to fully deployed (TRL 9). Understanding TRL is crucial for making informed decisions and improving the chances of successful technology development and commercialization."
+  },
+  {
+    question: "How does TRL evaluation guide the development process?",
+    answer: "TRL evaluation helps innovators focus on reaching specific readiness levels, making it easier to track progress, meet milestones, and streamline the development process."
+  },
+  {
+    question: "How does TRL assessment contribute to monitoring and managing innovation?",
+    answer: "TRL knowledge allows organizations to monitor progress and estimate the time required to bring a technology to market, facilitating effective progress tracking and growth management."
+  },
+  {
+    question: "How does understanding TRL provide a competitive advantage?",
+    answer: "Knowing your technology's TRL relative to competitors enables effective positioning of your innovation, identifying areas for gaining a competitive edge in the market."
+  },
+  {
+    question: "How does TRL assessment inform market entry strategies?",
+    answer: "TRL assessment helps organizations decide when and how to introduce their technology into the market, maximizing the chances of success through informed market entry strategies."
+  },
+  {
+    question: "How does TRL assessment contribute to resource allocation?",
+    answer: "By understanding the current level of technology readiness, organizations can allocate resources effectively, ensuring efficient use of time and budget where they are needed most."
+  },
+  {
+    question: "How can TRL assessments be used for strategic decision-making?",
+    answer: "Organizations can use TRL assessments to make strategic decisions about their technology portfolio, focusing on technologies with the highest potential for success."
+  },
+  {
+    question: "How does TRL assessment impact scaling and commercialization?",
+    answer: "Technologies at higher TRL levels are more likely to scale and succeed in the market. TRL assessment helps organizations determine the readiness of their innovations for successful commercialization."
+  },
+  {
+    question: "How can I initiate a Technology Maturity Assessment for my innovation?",
+    answer: "Contact our team through the provided channels to initiate a Technology Maturity Assessment for your innovation. Our experts will guide you through the process and provide tailored assistance based on your needs."
   }
 ];
 

@@ -26,7 +26,7 @@ const services = [
   },
   {
     title: "Want to list your ongoing work for our records or any future opportunity?",
-    description: "If you wish to contribute to our collaborative ecosystem by listing your ongoing work or expressing interest in potential future opportunities, we encourage you to share your details through our Tech Transfer platform.",
+    description: "If you wish to contribute to our collaborative ecosystem by listing your ongoing work or expressing interest in potential future opportunities, we encourage you to share your details with us.",
     icon: FormatListBulletedIcon
   },
   {

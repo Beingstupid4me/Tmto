@@ -16,7 +16,8 @@ import {
   Groups,
   Message,
   Business,
-  ExpandMore
+  ExpandMore,
+  LightbulbOutlined
 } from '@mui/icons-material';
 import { Innovate_disclosure_form, Schedule_meet_link } from '../../../assets/links';
 import './page.css';
@@ -38,39 +39,64 @@ const services = [
     icon: Message
   },
   {
-    title: "Commercializa-tion Support",
+    title: "Commercialisation Support",
     description: "We provide all the guidance you need to transform your research into viable products and services.",
     icon: Business
   },
   {
-    title: "Funding Opportunities",
-    description: "Take advantage of various funding options to speed up your path from concept to market.",
-    icon: Message
-  },
-  {
     title: "Entrepreneurial Ecosystem",
     description: "Join our dynamic network of creators, startups, and mentors dedicated to fostering growth and success.",
-    icon: Message
+    icon: LightbulbOutlined
   }
 ];
 
+// TECH LISENCING
+
 const faqs = [
   {
-    question: "How can I schedule a meeting with an innovation expert?",
-    answer: "You can schedule a meeting by clicking the 'Schedule a Meeting' button above or by contacting our office directly. We'll match you with the most suitable expert for your needs."
+    question: "What is the Technology Licensing and Research Commercialization program, and who can benefit from it?",
+    answer: "The program is designed to turn innovative ideas into real-world solutions. It benefits businesses looking to innovate, researchers aiming to make an impact, and anyone interested in collaborative opportunities.",
   },
   {
-    question: "What types of workshops do you offer?",
-    answer: "We offer a wide range of workshops including ideation sessions, intellectual property protection, product development, market research, and entrepreneurship basics."
+    question: "How can I access innovation through the program?",
+    answer: "Explore our rich portfolio of intellectual assets, from patents to software, ready for licensing and collaboration. Details on available innovations can be found on our platform.",
   },
   {
-    question: "Can students participate in all events?",
-    answer: "Yes! All our events are open to students, faculty members, and external entrepreneurs. Some specialized events might have specific eligibility criteria."
+    question: "What are the benefits of forging strategic partnerships within the program?",
+    answer: "Forge powerful alliances with our network of industry leaders, researchers, and entrepreneurs. Collaborative partnerships can enhance your innovation journey and open doors to new opportunities.",
   },
   {
-    question: "How do you help connect with industry partners?",
-    answer: "We maintain strong relationships with industry leaders and organize regular networking events, mentorship programs, and partnership opportunities."
-  }
+    question: "How does Intellectual Property Management safeguard my ideas within the program?",
+    answer: "Our expert IP management ensures that your ideas remain protected throughout the licensing and commercialization process, providing a secure environment for your innovations.",
+  },
+  {
+    question: "What kind of commercialization support is provided in the program?",
+    answer: "Receive comprehensive guidance to turn research breakthroughs into successful products and services. Our support covers various aspects of commercialization, from strategy development to market entry.",
+  },
+  {
+    question: "How can I join the entrepreneurial ecosystem mentioned in the program?",
+    answer: "Join the vibrant community of innovators, startups, and mentors we enjoy. Connect with us through the provided channels, and we'll guide you on becoming part of the entrepreneurial ecosystem.",
+  },
+  {
+    question: "Is there a cost associated with accessing the intellectual assets for licensing?",
+    answer: "The costs associated with accessing intellectual assets for licensing may vary. Details on licensing fees and terms can be obtained by reaching out to our licensing and commercialization team.",
+  },
+  {
+    question: "How can businesses benefit specifically from the program?",
+    answer: "Businesses can benefit by accessing cutting-edge technologies for licensing, forging strategic partnerships, receiving commercialization support, and tapping into funding opportunities to drive innovation and growth.",
+  },
+  {
+    question: "Can individual researchers participate in the program, or is it exclusive to businesses?",
+    answer: "The program is open to both individual researchers and businesses. Whether you're a solo innovator or part of a larger organization, we welcome your participation and collaboration.",
+  },
+  {
+    question: "How can I stay updated on available intellectual assets and collaboration opportunities?",
+    answer: "Regularly check our platform for updates on available intellectual assets, collaboration opportunities, and announcements related to the Technology Licensing and Research Commercialization program.",
+  },
+  {
+    question: "Is there a specific application process to join the program, and how can I get started?",
+    answer: "Contact our team through the provided channels to inquire about joining the program. We'll guide you through any application process and provide the necessary information to get started.",
+  },
 ];
 
 const TechLicensingPage = () => {

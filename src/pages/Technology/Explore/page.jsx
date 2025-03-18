@@ -366,7 +366,7 @@ export default function ExploreTechnologiesPage() {
   const rowsPerPage = 8;
 
   useEffect(() => {
-    fetch("http://localhost:5000/technologies")
+    fetch("http://localhost:4000/technologies")
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched data:", data);
@@ -619,7 +619,7 @@ export default function ExploreTechnologiesPage() {
               ) : (
                 <Box>
                   <Stack spacing={3}>
-                    {technologies.slice(0, 4).map((tech, index) => (
+                    {technologies.filter(tech => tech.spotlight).map((tech, index) => (
                       <Spotlight key={index} tech={tech} />
                     ))}
                   </Stack>

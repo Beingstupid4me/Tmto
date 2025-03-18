@@ -27,11 +27,11 @@ const services = [
     description: "Submit Your Ideas and Projects. Share your innovative ideas, research, or projects with us.",
     icon: CalendarMonth
   },
-  {
-    title: "Exploring Funding for Your Research Work",
-    description: "Learn about various funding options available for your research work.",
-    icon: Groups
-  },
+  // {
+  //   title: "Exploring Funding for Your Research Work",
+  //   description: "Learn about various funding options available for your research work.",
+  //   icon: Groups
+  // },
   {
     title: "Engage with Us",
     description: "Join us in collaborative projects and community engagements.",
@@ -74,7 +74,7 @@ const FacultyResourcesPage = () => {
               Resources for Faculty & Staff
             </Typography>
             <Typography variant="body1" className="hero-description">
-            At Technology Transfer Office IIIT Delhi, we bridge academia and innovation, transforming research into societal benefits. Our dynamic ecosystem fosters intellectual property and transcends academic boundaries, driving innovation forward. We facilitate technology transfer to ensure scientific discoveries benefit society, securing market exclusivity for novel products. By encouraging collaboration across sectors, we fuel regional development. Through policy support and practical guides, we nurture faculty talents for commercial success and societal impact. Join us to unlock the full potential of your innovations and shape tomorrow's landscape.
+            At the Technology Transfer Office, we bridge academia and innovation, transforming research into societal benefits. Our dynamic ecosystem fosters intellectual property and transcends academic boundaries, driving innovation forward. Join us to unlock the full potential of your innovations and shape tomorrow's landscape.
             </Typography>
             <Box className="hero-buttons">
               <a href= {Schedule_meet_link} target="_blank" rel="noreferrer">

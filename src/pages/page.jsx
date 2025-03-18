@@ -28,6 +28,9 @@ function useParallax(value, distance) {
 }
 
 
+const handleScroll = () => {
+  window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
+};
 
 // A simple Link component replacing Next.js Link
 const Link = ({ children, href, style: userStyle = {}, ...props }) => {
@@ -433,10 +436,10 @@ export default function Home() {
                   <motion.div
                     style={{
                       position: "absolute",
-                      right: "-32px",
+                      right: "-35px",
                       top: "25%",
-                      height: "4rem",
-                      width: "4rem",
+                      height: "8rem",
+                      width: "8rem",
                       borderRadius: "0.5rem",
                       backgroundColor: "#d1fae5",
                     }}
@@ -455,12 +458,29 @@ export default function Home() {
                       position: "absolute",
                       left: "-16px",
                       bottom: "33%",
-                      height: "3rem",
-                      width: "3rem",
+                      height: "6rem",
+                      width: "6rem",
                       borderRadius: "50%",
                       backgroundColor: "#bfdbfe",
                     }}
                     animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
+                    transition={{
+                      duration: 7,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  />
+                  <motion.div
+                    style={{
+                      position: "absolute",
+                      left: "150px",
+                      bottom: "73%",
+                      height: "6rem",
+                      width: "6rem",
+                      borderRadius: "30%",
+                      backgroundColor: "#bfdbfe",
+                    }}
+                    animate={{ y: [0, 25, 0], rotate: [0, 20, 0] }}
                     transition={{
                       duration: 7,
                       repeat: Infinity,
@@ -479,15 +499,18 @@ export default function Home() {
               bottom: "2rem",
               left: "50%",
               transform: "translateX(-50%)",
+              cursor: "pointer",
             }}
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+            onClick={handleScroll}
           >
             <div
               style={{
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
+                justifyContent: "center",
               }}
             >
               <div
@@ -496,6 +519,9 @@ export default function Home() {
                   width: "1.5rem",
                   borderRadius: "9999px",
                   border: "1px solid #d1d5db",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                   padding: "0.25rem",
                 }}
               >
@@ -518,7 +544,7 @@ export default function Home() {
                 Scroll
               </span>
             </div>
-          </motion.div>
+          </motion.div>;
         </section>
 
         {/* Stats Counter Section */}
@@ -665,7 +691,6 @@ export default function Home() {
                       style={{
                         height: "2.5rem",
                         width: "auto",
-                        filter: "grayscale(100%)",
                         transition: "all 0.5s ease",
                       }}
                     />
@@ -677,7 +702,7 @@ export default function Home() {
         </section>
 
         {/* What We Do Section with interactive cards */}
-        <section style={{ padding: "6rem 0", position: "relative" }}>
+        <section style={{ padding: "4rem 0", position: "relative" }}>
           <div
             style={{
               position: "absolute",
@@ -821,7 +846,7 @@ export default function Home() {
         </section>
 
         {/* Technology Highlights with 3D cards */}
-        <section style={{ padding: "6rem 0", background: "linear-gradient(to bottom, #ffffff, #f9fafb)" }}>
+        <section style={{ padding: "4rem 0", background: "linear-gradient(to bottom, #ffffff, #f9fafb)" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1rem" }}>
             <motion.div
               style={{
@@ -937,7 +962,7 @@ export default function Home() {
         </section>
 
         {/* Connect With Us - 3D perspective section */}
-        <section style={{ padding: "6rem 0", position: "relative", overflow: "hidden" }}>
+        <section style={{ padding: "4rem 0", position: "relative", overflow: "hidden" }}>
           <div
             style={{
               position: "absolute",
@@ -1004,7 +1029,7 @@ const services = [
   {
     title: "Commercialization",
     description:
-      "Transform groundbreaking research into market-ready solutions with our proven methodology.",
+      "Transform groundbreaking research into market-ready solutions with our industry partnerships.",
     icon: Rocket,
   },
 ];

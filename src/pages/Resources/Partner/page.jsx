@@ -31,16 +31,16 @@ const services = [
     description: "If you're interested in licensing our cutting-edge technology, please fill out the form provided in the link.",
     icon: Groups
   },
-  {
-    title: "Want to apply for IPR ?",
-    description: "Protect your intellectual property by applying for Intellectual Property Rights (IPR). Submit the form available at the provided link to start the process.",
-    icon: Message
-  },
-  {
-    title: "Need help for fundraising ?",
-    description: "We offer consulting services and contract research opportunities.",
-    icon: Business
-  },
+  // {
+  //   title: "Want to apply for IPR ?",
+  //   description: "Protect your intellectual property by applying for Intellectual Property Rights (IPR). Submit the form available at the provided link to start the process.",
+  //   icon: Message
+  // },
+  // {
+  //   title: "Need help for fundraising ?",
+  //   description: "We offer consulting services and contract research opportunities.",
+  //   icon: Business
+  // },
   {
     title: "Want to discuss something about your product or service",
     description: "Help in turning your concepts into market-ready products.",
@@ -63,7 +63,7 @@ const PartnerResourcesPage = () => {
               Resources for Partner
             </Typography>
             <Typography variant="body1" className="hero-description">
-            Welcome to our comprehensive resources hub for partners, innovators, and collaborators. Whether you're looking to outsource research or technology-related work, explore licensing opportunities for cutting-edge technology, apply for Intellectual Property Rights (IPR), or seek assistance with fundraising, we're here to support you every step of the way. Our dedicated team is committed to providing high-quality solutions tailored to your needs and fostering meaningful collaborations. Explore the links below to submit forms, schedule meetings, or contact us directly. We're excited to work with you and help bring your vision to life.
+            Whether you're looking to outsource research or technology-related work, explore licensing opportunities for cutting-edge technology we're here to support you every step of the way. We are committed to providing high-quality solutions tailored to your needs and fostering meaningful collaborations. We're excited to work with you and help bring your vision to life.
             </Typography>
             <Box className="hero-buttons">
               <a href= {Schedule_meet_link} target="_blank" rel="noreferrer">

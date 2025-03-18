@@ -182,7 +182,7 @@ const TechnologyPage = () => {
         </Container>
       </Box>
 
-      {/* FAQ Section */}
+      {/* FAQ Section
       <Container className="faq-section">
         <Typography variant="h2" className="faq-title">
           Frequently Asked Questions
@@ -205,7 +205,7 @@ const TechnologyPage = () => {
             </Accordion>
           ))}
         </Box>
-      </Container>
+      </Container> */}
     </div>
   );
 };

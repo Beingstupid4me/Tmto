@@ -1,259 +1,124 @@
-import React from "react";
+// CONTACT US
+
+import React, { useState } from 'react';
 import {
   Box,
   Container,
-  Grid,
-  Card,
   Typography,
+  Grid,
   TextField,
-  Button
-} from "@mui/material";
-import { Business, Language, Mail, Phone } from "@mui/icons-material";
+  Button,
+  Card,
+  CardContent,
+  IconButton,
+  Paper,
+  Divider,
+  useMediaQuery,
+  useTheme,
+  Snackbar,
+  Alert
+} from '@mui/material';
+import {
+  Phone as PhoneIcon,
+  Email as EmailIcon,
+  LocationOn as LocationIcon,
+  AccessTime as TimeIcon,
+  Facebook as FacebookIcon,
+  Twitter as TwitterIcon,
+  Instagram as InstagramIcon,
+  LinkedIn as LinkedInIcon
+} from '@mui/icons-material';
+import LanguageIcon from '@mui/icons-material/Language';
 
-function HeroSection() {
-  return (
-    <Box
-      sx={{
-        position: "relative",
-        minHeight: { xs: "10vh", md: "10vh" },
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "flex-start", // Align content to the left horizontally
-      }}
-    >
-      {/* Overlay gradient for a dramatic effect */}
-      <Box
-        sx={{
-          position: "absolute",
-          inset: 0,
-          background: "#F5F5F5",
-          opacity: 0.9,
-        }}
-      />
-      <Container
-        sx={{
-          position: "relative",
-          zIndex: 1,
-          textAlign: "left", // Change text alignment to left
-          color: "#fff",
-          py: { xs: 6, md: 8 },
-        }}
-      >
-        <Typography
-          variant="h3"
-          sx={{
-            display: "inline-block", // Shrink-wraps the element to its content
-            fontWeight: 700,
-            letterSpacing: 2,
-            mb: 2,
-            color: "black",
-            position: "relative",
-            paddingBottom: "10px",
-            "&::after": {
-              content: '""',
-              position: "absolute",
-              left: 0,
-              bottom: 0,
-              width: "100%", // Takes the full width of the heading
-              height: "4px",
-              background: "linear-gradient(90deg, #8b5cf6, #20b2aa)",
-              borderRadius: "2px",
-            },
-          }}
-        >
-          Contact Us
-        </Typography>
-
-        
-      </Container>
-    </Box>
-  );
-}
-
-
-function ContactInfo() {
+const ContactPage = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+  
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  
+  const [snackbar, setSnackbar] = useState({
+    open: false,
+    message: '',
+    severity: 'success'
+  });
+  
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Form submission logic would go here
+    setSnackbar({
+      open: true,
+      message: 'Your message has been sent successfully!',
+      severity: 'success'
+    });
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: ''
+    });
+  };
+  
+  const handleCloseSnackbar = () => {
+    setSnackbar({
+      ...snackbar,
+      open: false
+    });
+  };
+  
+  // Updated contactDetails: now each detail includes a "link" property.
   const contactDetails = [
     {
-      icon: <Business sx={{ color: "#8b5cf6", fontSize: 30 }} />,
-      title: "Address",
-      content: "A-303, Academic Building, Okhla Industrial Estate, Phase III",
-      link: null
+      icon: <PhoneIcon sx={{ color: '#00B2B2', fontSize: 28 }} />,
+      title: 'Phone',
+      details: ['011 - 26907550'],
+      link: 'tel:011-26907550'
     },
     {
-      icon: <Phone sx={{ color: "#8b5cf6", fontSize: 30 }} />,
-      title: "Phone",
-      content: "011-26907550",
-      link: "tel:011-26907550"
+      icon: <EmailIcon sx={{ color: '#00B2B2', fontSize: 28 }} />,
+      title: 'Email',
+      details: ['alok@iiitd.ac.in'],
+      link: 'mailto:alok@iiitd.ac.in'
     },
     {
-      icon: <Language sx={{ color: "#8b5cf6", fontSize: 30 }} />,
-      title: "Website",
-      content: "https://iiitd.ac.in/otmt",
-      link: "https://iiitd.ac.in/otmt"
+      icon: <LocationIcon sx={{ color: '#00B2B2', fontSize: 28 }} />,
+      title: 'Address',
+      details: ['A-303, Academic Building, Okhla Industrial Estate, Phase IIIT-D'],
+      link: 'https://www.google.com/maps/search/?api=1&query=A-303,+Academic+Building,+Okhla+Industrial+Estate,+Phase+IIIT-D'
     },
     {
-      icon: <Mail sx={{ color: "#8b5cf6", fontSize: 30 }} />,
-      title: "Email",
-      content: "alok@iiitd.ac.in",
-      link: "mailto:alok@iiitd.ac.in"
+      icon: <LanguageIcon sx={{ color: '#00B2B2', fontSize: 28 }} />,
+      title: 'Office E-Mail',
+      details: ['info@iiitd.ac.in'],
+      link: 'mailto:info@iiitd.ac.in'
     }
   ];
-
+  
+  const socialMedia = [
+    { icon: <FacebookIcon />, name: 'Facebook' },
+    { icon: <TwitterIcon />, name: 'Twitter' },
+    { icon: <InstagramIcon />, name: 'Instagram' },
+    { icon: <LinkedInIcon />, name: 'LinkedIn' }
+  ];
+  
   return (
-    <Card
-      sx={{
-        p: 3,
-        background:
-          "linear-gradient(to bottom, #ffffff, rgba(241, 245, 249, 0.3))",
-        boxShadow: 3,
-        borderRadius: 2,
-        height: "100%"
-      }}
-    >
-      <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-        Get in Touch
-      </Typography>
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-        {contactDetails.map((detail, index) => (
-          <Box
-            key={index}
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: 2,
-              transition: "transform 0.3s",
-              "&:hover": { transform: "scale(1.02)" }
-            }}
-          >
-            {detail.icon}
-            <Box>
-              <Typography sx={{ fontWeight: 500 }}>{detail.title}</Typography>
-              {detail.link ? (
-                <a href={detail.link} style={{ textDecoration: "none" }}>
-                  <Typography
-                    sx={{
-                      color: "text.secondary",
-                      fontSize: "0.875rem",
-                      transition: "color 0.3s",
-                      "&:hover": { color: "#8b5cf6" }
-                    }}
-                  >
-                    {detail.content}
-                  </Typography>
-                </a>
-              ) : (
-                <Typography
-                  sx={{ color: "text.secondary", fontSize: "0.875rem" }}
-                >
-                  {detail.content}
-                </Typography>
-              )}
-            </Box>
-          </Box>
-        ))}
-      </Box>
-    </Card>
-  );
-}
-
-function MapSection() {
-  return (
-    <Card
-      sx={{
-        boxShadow: 3,
-        borderRadius: 2,
-        overflow: "hidden",
-        height: "100%"
-      }}
-    >
-      <Box sx={{ position: "relative", pt: "56.25%" }}>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.9584425776574!2d77.27072131492844!3d28.544076982452995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3e564daac1d%3A0x2c582e340e7bc556!2sIIIT-Delhi%20R%26D%20Building!5e0!3m2!1sen!2sin!4v1645524815197!5m2!1sen!2sin"
-          width="100%"
-          height="100%"
-          style={{ border: 0, position: "absolute", top: 0, left: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="IIIT Delhi Location"
-        />
-      </Box>
-    </Card>
-  );
-}
-
-// function ContactForm() {
-//   return (
-//     <Card sx={{ p: 3, boxShadow: 3, borderRadius: 2 }}>
-//       <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-//         Send us a Message
-//       </Typography>
-//       <Box component="form" noValidate sx={{ mt: 1 }}>
-//         <Grid container spacing={2}>
-//           <Grid item xs={12} md={6}>
-//             <TextField
-//               fullWidth
-//               id="name"
-//               label="Full Name"
-//               placeholder="Enter your full name"
-//               variant="outlined"
-//             />
-//           </Grid>
-//           <Grid item xs={12} md={6}>
-//             <TextField
-//               fullWidth
-//               id="email"
-//               label="Email ID"
-//               type="email"
-//               placeholder="Enter your email"
-//               variant="outlined"
-//             />
-//           </Grid>
-//           <Grid item xs={12}>
-//             <TextField
-//               fullWidth
-//               id="query"
-//               label="Query"
-//               placeholder="How can we help you?"
-//               multiline
-//               rows={6}
-//               variant="outlined"
-//             />
-//           </Grid>
-//           <Grid item xs={12}>
-//             <Button
-//               variant="contained"
-//               fullWidth
-//               sx={{
-//                 background:
-//                   "linear-gradient(90deg, #8b5cf6, #20b2aa)",
-//                 color: "#fff",
-//                 px: 3,
-//                 py: 1.5,
-//                 fontSize: "1rem",
-//                 fontWeight: 500,
-//                 textTransform: "none",
-//                 transition: "transform 0.3s, box-shadow 0.3s",
-//                 "&:hover": {
-//                   transform: "scale(1.05)",
-//                   boxShadow: 6,
-//                   background:
-//                     "linear-gradient(90deg, #8b5cf6, #20b2aa)"
-//                 }
-//               }}
-//             >
-//               Submit Details
-//             </Button>
-//           </Grid>
-//         </Grid>
-//       </Box>
-//     </Card>
-//   );
-// }
-
-export default function ContactPage() {
-  return (
-    <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+    <Box sx={{ bgcolor: 'white' }}>
       {/* Hero Section */}
       <Box className="hero-section" minHeight='20vh'>
         <Container maxWidth="lg">
@@ -264,24 +129,256 @@ export default function ContactPage() {
             <Typography variant="h1" className="hero-title">
               Contact Us
             </Typography>
-            
-            
-          </Box>
-        </Container>
+            <Typography variant="body1" className="hero-description">
+              Connect with our team for personalized support, answers to your queries, and collaboration opportunities. 
+            </Typography>
+          </Box>         
+        </Container>       
       </Box>
-      <Container sx={{ py: { xs: 4, md: 6 } }}>
-        <Grid container spacing={4}>
-          <Grid item xs={12} lg={4}>
-            <ContactInfo />
-          </Grid>
-          <Grid item xs={12} lg={8}>
-            <MapSection />
-          </Grid>
-          {/* <Grid item xs={12}>
-            <ContactForm />
-          </Grid> */}
+      
+      {/* Main Content */}
+      <Container maxWidth="lg" sx={{ py: 4 }}>
+        {/* Contact Info Cards */}
+        <Grid container spacing={3} sx={{ mb: 8 }}>
+          {contactDetails.map((detail, index) => (
+            <Grid item xs={12} sm={6} md={3} key={index}>
+              <Card 
+                elevation={0}
+                sx={{
+                  height: '100%',
+                  transition: 'all 0.3s ease',
+                  borderRadius: '12px',
+                  border: '1px solid #e0e0e0',
+                  '&:hover': {
+                    transform: 'translateY(-5px)',
+                    boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                    borderColor: '#00B2B2'
+                  }
+                }}
+              >
+                <CardContent sx={{ p: 3, textAlign: 'center' }}>
+                  <Box sx={{ mb: 2 }}>
+                    {detail.icon}
+                  </Box>
+                  <Typography variant="h6" fontWeight={600} sx={{ mb: 1 }}>
+                    {detail.title}
+                  </Typography>
+                  {detail.details.map((item, idx) =>
+                    detail.link ? (
+                      <a
+                        key={idx}
+                        href={detail.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: 'none', color: 'inherit' }}
+                      >
+                        <Typography variant="body2" color="text.secondary" sx={{ mb: 0.5 }}>
+                          {item}
+                        </Typography>
+                      </a>
+                    ) : (
+                      <Typography key={idx} variant="body2" color="text.secondary" sx={{ mb: 0.5 }}>
+                        {item}
+                      </Typography>
+                    )
+                  )}
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
         </Grid>
+        
+        {/* Main Content: Form and Map - FIXED EQUAL HEIGHT */}
+        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4 }}>
+          {/* Contact Form */}
+          <Box
+            sx={{
+              flex: 1,
+              display: 'flex',
+              flexDirection: 'column'
+            }}
+          >
+            <Paper 
+              elevation={0} 
+              sx={{ 
+                p: 4, 
+                borderRadius: '12px', 
+                border: '1px solid #e0e0e0',
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100%' // ensures full height
+              }}
+            >
+              <Typography variant="h4" fontWeight={600} sx={{ mb: 3 }}>
+                Send Us a Message
+              </Typography>
+              <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
+                Have a question or want to work together? Fill out the form below, and we'll get back to you as soon as possible.
+              </Typography>
+              
+              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                <Grid container spacing={3} sx={{ flexGrow: 1, alignContent: 'flex-start' }}>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      fullWidth
+                      label="Full Name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      variant="outlined"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      fullWidth
+                      label="Email Address"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      variant="outlined"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      fullWidth
+                      label="Phone Number"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      variant="outlined"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      fullWidth
+                      label="Subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      required
+                      variant="outlined"
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      fullWidth
+                      label="Your Message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      multiline
+                      rows={4}
+                      variant="outlined"
+                      sx={{ mb: 2 }}
+                    />
+                  </Grid>
+                  <Grid item xs={12} sx={{ mt: 'auto' }}>
+                    <Button 
+                      type="submit" 
+                      variant="contained" 
+                      size="large"
+                      sx={{
+                        bgcolor: '#00B2B2',
+                        '&:hover': {
+                          bgcolor: '#009494',
+                        },
+                        px: 4,
+                        py: 1.5,
+                        borderRadius: '8px',
+                      }}
+                    >
+                      Send Message
+                    </Button>
+                  </Grid>
+                </Grid>
+              </form>
+            </Paper>
+          </Box>
+          
+          {/* Map */}
+          <Box 
+            sx={{
+              flex: 1
+            }}
+          >
+            <Paper 
+              elevation={0} 
+              sx={{ 
+                p: 0, 
+                borderRadius: '12px', 
+                border: '1px solid #e0e0e0',
+                height: '100%',
+                overflow: 'hidden'
+              }}
+            >
+              <Box sx={{ height: '100%', position: 'relative' }}>
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.9584425776574!2d77.27072131492844!3d28.544076982452995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3e564daac1d%3A0x2c582e340e7bc556!2sIIIT-Delhi%20R%26D%20Building!5e0!3m2!1sen!2sin!4v1645524815197!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0, position: 'absolute', top: 0, left: 0 }}
+                  title="Location Map"
+                />
+                
+                {/* Info Box overlay on the map */}
+                <Box 
+                  sx={{
+                    position: 'absolute',
+                    bottom: '20px',
+                    right: '20px',
+                    maxWidth: '300px',
+                    bgcolor: 'rgba(255, 255, 255, 0.95)',
+                    p: 3,
+                    borderRadius: '8px',
+                    boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
+                    display: isMobile ? 'none' : 'block'
+                  }}
+                >
+                  <Typography variant="h6" fontWeight={600} sx={{ mb: 1, color: '#00B2B2' }}>
+                    IIIT-Delhi R&D Building
+                  </Typography>
+                  <Typography variant="body2" sx={{ mb: 2, lineHeight: 1.6 }}>
+                    A-303, Academic Building, Okhla Industrial Estate, Phase - 3
+                  </Typography>
+                  <Button 
+                    variant="outlined"
+                    size="small"
+                    startIcon={<LocationIcon />}
+                    href="https://www.google.com/maps/dir/?api=1&destination=$IIITD" 
+                    target="_blank"
+                    sx={{
+                      borderColor: '#00B2B2',
+                      color: '#00B2B2',
+                      '&:hover': {
+                        borderColor: 'black',
+                        bgcolor: '#E6FFFF'
+                      }
+                    }}
+                  >
+                    Get Directions
+                  </Button>
+                </Box>
+              </Box>
+            </Paper>
+          </Box>
+        </Box>
       </Container>
+      
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={6000}
+        onClose={handleCloseSnackbar}
+      >
+        <Alert onClose={handleCloseSnackbar} severity={snackbar.severity} sx={{ width: '100%' }}>
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </Box>
   );
-}
+};
+
+export default ContactPage;

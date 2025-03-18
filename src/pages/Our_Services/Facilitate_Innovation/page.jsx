@@ -39,7 +39,7 @@ const services = [
     icon: Message
   },
   {
-    title: "Meet Big Companies",
+    title: "Meet Industry Players",
     description: "We help you meet the big players in the industry. A great chance to find a partner, start a joint project, or get your idea licensed.",
     icon: Business
   },
@@ -50,23 +50,57 @@ const services = [
   }
 ];
 
+// FACILITATE INNOVATION
+
 const faqs = [
   {
-    question: "How can I schedule a meeting with an innovation expert?",
-    answer: "You can schedule a meeting by clicking the 'Schedule a Meeting' button above or by contacting our office directly. We'll match you with the most suitable expert for your needs."
+    question: "Who can participate in the workshops and events?",
+    answer: "Workshops and events are open to students, faculty members, and external entrepreneurs interested in fostering innovation.",
   },
   {
-    question: "What types of workshops do you offer?",
-    answer: "We offer a wide range of workshops including ideation sessions, intellectual property protection, product development, market research, and entrepreneurship basics."
+    question: "What topics are covered in the hand-on workshops?",
+    answer: "Workshops cover a range of topics, including Technology Readiness, intellectual property rights, design thinking, and entrepreneurship.",
   },
   {
-    question: "Can students participate in all events?",
-    answer: "Yes! All our events are open to students, faculty members, and external entrepreneurs. Some specialized events might have specific eligibility criteria."
+    question: "How can I updated on innovation events and competitions?",
+    answer: "Regularly check our platform for announcements, subscribe to our newsletter, and follow us on social media for real-time updates on events, hackathons, and competitions.",
   },
   {
-    question: "How do you help connect with industry partners?",
-    answer: "We maintain strong relationships with industry leaders and organize regular networking events, mentorship programs, and partnership opportunities."
-  }
+    question: "What is the purpose of the Research showcase an Industry connect events?",
+    answer: "These events serve to bring ecosystem partners together, providing a platform for knowledge sharing, collaboration, and networking between academia, researchers, and industry professionals.",
+  },
+  {
+    question: "How can I schedule a one on one innovation consultation?",
+    answer: "Contact our team through the provided channels to schedule a personalized consultation with our innovation experts.",
+  },
+  {
+    question: "What types of advisory services are offered during one on one consultations?",
+    answer: "Our experts provide guidance on idea development, problem-solving, innovation strategies, and tailored commercialization roadmaps.",
+  },
+  {
+    question: "How can I connect with industry leaders for collaboration opportunities?",
+    answer: "We facilitate corporate connections, offering opportunities to collaborate with industry leaders through innovation partnerships, joint ventures, or technology licensing.",
+  },
+  {
+    question: "What support is available for commercialization, startup, and funding needs?",
+    answer: "We offer guidance on transforming innovative ideas into market-ready products or services, including advice on product development, market research, business strategies, and funding avenues.",
+  },
+  {
+    question: "Can external entrepreneurs participate in startup advisory services?",
+    answer: "Yes, our startup advisory services are open to both internal stakeholders (students and faculty) and external entrepreneurs seeking guidance on commercialization and funding.",
+  },
+  {
+    question: "How can I showcase my innovative ideas in your events?",
+    answer: "Participate in our innovation events, hackathons, and competitions to showcase your ideas and collaborate with like-minded innovators. Follow the registration process provided for each specific event.",
+  },
+  {
+    question: "Is there a cost associated with participating in the workshops and events?",
+    answer: "Most of our workshops and events are open and free for participants. However, specific events may have registration fees, which will be clearly communicated in the event details.",
+  },
+  {
+    question: "How do I inquire about available funding opportunities for my startup?",
+    answer: "During one-on-one consultations, our experts can guide you on funding avenues and provide information on available resources and opportunities based on your startup's specific needs.",
+  },
 ];
 
 const InnovationPage = () => {

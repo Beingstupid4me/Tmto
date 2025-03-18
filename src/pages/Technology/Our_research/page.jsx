@@ -175,32 +175,6 @@ const researchProjects = [
   }
 ];
 
-const sponsoredProjects = [
-  {
-    title: 'Industry Sponsored',
-    projects: [
-      { name: 'Next-Gen Recommendation Systems', sponsor: 'Amazon', pi: 'Dr. Rajiv Ratn Shah', duration: '2022-2024' },
-      { name: 'Autonomous Vehicle Navigation', sponsor: 'Intel', pi: 'Dr. Chetan Arora', duration: '2021-2023' },
-      { name: 'Cloud Security Solutions', sponsor: 'Microsoft', pi: 'Dr. Sambuddho Chakravarty', duration: '2023-2025' }
-    ]
-  },
-  {
-    title: 'Government Sponsored',
-    projects: [
-      { name: 'Digital India Initiatives', sponsor: 'MeitY', pi: 'Dr. Ponnurangam Kumaraguru', duration: '2022-2025' },
-      { name: 'National Supercomputing Mission', sponsor: 'DST', pi: 'Dr. Angshul Majumdar', duration: '2021-2024' },
-      { name: 'Smart Healthcare for Rural India', sponsor: 'DBT', pi: 'Dr. Tavpritesh Sethi', duration: '2023-2026' }
-    ]
-  },
-  {
-    title: 'International Collaborations',
-    projects: [
-      { name: 'Indo-US Joint Research on AI Ethics', sponsor: 'NSF & DST', pi: 'Dr. Ponnurangam Kumaraguru', duration: '2022-2025' },
-      { name: 'Indo-German Sustainable Computing', sponsor: 'DAAD & UGC', pi: 'Dr. Anand Srivastava', duration: '2021-2024' },
-      { name: 'Indo-Japan IoT Solutions', sponsor: 'JST & DST', pi: 'Dr. Amarjeet Singh', duration: '2023-2026' }
-    ]
-  }
-];
 
 const focusAreas = [
   {
@@ -249,24 +223,6 @@ const rdInitiatives = [
   },
 ];
 
-const faqItems = [
-  {
-    question: "What types of workshops do you offer?",
-    answer:
-      "We offer a variety of workshops including innovation and entrepreneurship, intellectual property rights, research commercialization, and industry collaboration sessions.",
-  },
-  {
-    question: "Can students participate in all events?",
-    answer:
-      "Yes, most of our events are open to students. Some specialized workshops may have specific eligibility requirements which will be clearly stated in the event details.",
-  },
-  {
-    question: "How do you help connect with industry partners?",
-    answer:
-      "We facilitate connections through networking events, industry meetups, and our partner database. We also provide support in preparing pitch presentations and partnership proposals.",
-  },
-];
-
 const quickActions = [
   {
     title: "Research Proposals",
@@ -290,25 +246,6 @@ const quickActions = [
   },
 ];
 
-const faqs = [
-  {
-    question: "How can I schedule a meeting with an innovation expert?",
-    answer: "You can schedule a meeting by clicking the 'Schedule a Meeting' button above or by contacting our office directly. We'll match you with the most suitable expert for your needs."
-  },
-  {
-    question: "What types of workshops do you offer?",
-    answer: "We offer a wide range of workshops including ideation sessions, intellectual property protection, product development, market research, and entrepreneurship basics."
-  },
-  {
-    question: "Can students participate in all events?",
-    answer: "Yes! All our events are open to students, faculty members, and external entrepreneurs. Some specialized events might have specific eligibility criteria."
-  },
-  {
-    question: "How do you help connect with industry partners?",
-    answer: "We maintain strong relationships with industry leaders and organize regular networking events, mentorship programs, and partnership opportunities."
-  }
-];
-
 const services = [
   {
     title: "Workshops",
@@ -326,7 +263,7 @@ const services = [
     icon: Message
   },
   {
-    title: "Meet Big Companies",
+    title: "Meet Industry Players",
     description: "We help you meet the big players in the industry. A great chance to find a partner, start a joint project, or get your idea licensed.",
     icon: Business
   }
@@ -446,8 +383,8 @@ const OurResearch = () => {
                         <TableRow sx={{ backgroundColor: 'rgba(37, 144, 132, 0.05)' }}>
                           <TableCell sx={{ fontWeight: 'bold' }}>Project Name</TableCell>
                           <TableCell sx={{ fontWeight: 'bold' }}>Principal Investigator</TableCell>
-                          <TableCell sx={{ fontWeight: 'bold' }}>Funding Agency</TableCell>
-                          <TableCell sx={{ fontWeight: 'bold' }}>Duration</TableCell>
+                          {/* <TableCell sx={{ fontWeight: 'bold' }}>Funding Agency</TableCell>
+                          <TableCell sx={{ fontWeight: 'bold' }}>Duration</TableCell> */}
                         </TableRow>
                       </TableHead>
                       <TableBody>
@@ -455,8 +392,8 @@ const OurResearch = () => {
                           <TableRow key={idx} sx={{ '&:nth-of-type(odd)': { backgroundColor: 'rgba(0, 0, 0, 0.02)' } }}>
                             <TableCell>{project.name}</TableCell>
                             <TableCell>{project.pi}</TableCell>
-                            <TableCell>{project.funding}</TableCell>
-                            <TableCell>{project.duration}</TableCell>
+                            {/* <TableCell>{project.funding}</TableCell>
+                            <TableCell>{project.duration}</TableCell> */}
                           </TableRow>
                         ))}
                       </TableBody>
@@ -469,7 +406,7 @@ const OurResearch = () => {
         </Box>
 
         {/* Sponsored Projects */}
-        <Box sx={{ mb: '48px' }}>
+        {/* <Box sx={{ mb: '48px' }}>
           <SectionTitle variant="h4">
             Sponsored Projects
           </SectionTitle>
@@ -506,9 +443,9 @@ const OurResearch = () => {
               </StyledAccordion>
             ))}
           </Box>
-        </Box>
+        </Box> */}
 
-        {/* Focus Areas */}
+        {/* Focus Areas
         <Box sx={{ mb: '48px' }}>
           <SectionTitle variant="h4">
             Our Focus Areas
@@ -537,7 +474,7 @@ const OurResearch = () => {
               );
             })}
           </Grid>
-        </Box>
+        </Box> */}
 
         {/* R&D Initiatives */}
         <Box sx={{ mb: '48px' }}>
@@ -616,25 +553,6 @@ const OurResearch = () => {
           </Box>
         </Container>
       </Box>
-
-      {/* FAQ Section */}
-      <Container maxWidth="lg" className="faq-section">
-        <Typography variant="h2" align="center" className="faq-title">
-          Frequently Asked Questions
-        </Typography>
-        <Box className="faq-container">
-          {faqs.map((faq, index) => (
-            <Accordion key={index} className="faq-accordion">
-              <AccordionSummary expandIcon={<ExpandMore />}>
-                <Typography variant="h6">{faq.question}</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>{faq.answer}</Typography>
-              </AccordionDetails>
-            </Accordion>
-          ))}
-        </Box>
-      </Container>
     </>
   );
 };

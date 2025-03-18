@@ -37,6 +37,11 @@ const services = [
     icon: ArrowForward
  },
   {
+    title: "Wish to Start Your Venture?",
+    description: "Support and guidance for starting your own venture.",
+    icon: ArrowForward
+  }, 
+  {
     title: "Collaborate to Innovate",
     description: "We foster partnerships and idea exchange to drive innovation. Our commitment is to guide you in turning ideas into impactful realities.",
     icon: Groups
@@ -58,7 +63,7 @@ const StudentResourcesPage = () => {
                 Resources for Students
             </Typography>
             <Typography variant="body1" className="hero-description">
-            At Technology Transfer Office IIIT Delhi, we're dedicated to empowering students to translate their ideas into impactful solutions. Whether you're a student researcher or simply passionate about innovation, we provide the resources and support to guide you from concept to reality. From safeguarding intellectual property to fostering collaborations with industry, we're committed to helping you make a difference. Join us in turning your innovations into tangible contributions to society, while gaining valuable skills and experience along the way.
+            At our office, we're dedicated to empowering students to translate their ideas into impactful solutions. Whether you're a student researcher or simply passionate about innovation, we provide the resources and support to guide you from concept to reality. From safeguarding intellectual property to fostering collaborations with industry. Join us in turning your innovations into tangible contributions to society, while gaining valuable skills and experience along the way.
             </Typography>
             <Box className="hero-buttons">
               <a href= {Schedule_meet_link} target="_blank" rel="noreferrer">

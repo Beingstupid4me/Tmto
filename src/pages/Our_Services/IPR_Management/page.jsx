@@ -44,23 +44,53 @@ const services = [
   }
 ];
 
+// IPR MANAGEMENT
 const faqs = [
   {
-    question: "How can I schedule a meeting with an innovation expert?",
-    answer: "You can schedule a meeting by clicking the 'Schedule a Meeting' button above or by contacting our office directly. We'll match you with the most suitable expert for your needs."
+    question: "What is IPR, and why is it important for innovation?",
+    answer:
+      "Intellectual Property Rights (IPR) are legal protections for intellectual creations. They are crucial for innovation as they secure and maximize the value of groundbreaking ideas during the technology transfer process.",
   },
   {
-    question: "What types of workshops do you offer?",
-    answer: "We offer a wide range of workshops including ideation sessions, intellectual property protection, product development, market research, and entrepreneurship basics."
+    question: "What activities are involved in IPR consultation and strategy?",
+    answer:
+      "IPR consultation involves a comprehensive process to devise an effective strategy aligned with goals and objectives, ensuring the protection and profitability of innovative ideas.",
   },
   {
-    question: "Can students participate in all events?",
-    answer: "Yes! All our events are open to students, faculty members, and external entrepreneurs. Some specialized events might have specific eligibility criteria."
+    question: "How does Patentability Assessment contribute to the protection of technology?",
+    answer:
+      "Patentability Assessment evaluates the novelty and inventiveness of a technology, determining its eligibility for a patent and ensuring it meets the necessary criteria for legal protection.",
   },
   {
-    question: "How do you help connect with industry partners?",
-    answer: "We maintain strong relationships with industry leaders and organize regular networking events, mentorship programs, and partnership opportunities."
-  }
+    question: "Can you explain the process of filing a patent and what it involves?",
+    answer:
+      "Filing a patent includes managing the entire process, drafting claims, preparing required documents, navigating patent office procedures, responding to office actions, and representing clients during prosecution.",
+  },
+  {
+    question: "What is Patent Portfolio Management, and why is it important?",
+    answer:
+      "Patent Portfolio Management involves strategically managing and maintaining a portfolio of patents to maximize their value and protection. Regular reviews and updates are done based on business objectives and market trends.",
+  },
+  {
+    question: "How does Licensing and Technology Transfer work in the context of IPR?",
+    answer:
+      "Licensing agreements are negotiated and drafted to allow third parties to use, sell, or develop patented technology. This process facilitates the transfer of technology and intellectual property between entities.",
+  },
+  {
+    question: "What is the purpose of IPR Commercialization Strategy?",
+    answer:
+      "IPR Commercialization Strategy involves developing plans to effectively commercialize IP assets, considering market dynamics and competition. It identifies potential licensing opportunities, partnerships, or ventures for monetizing intellectual property.",
+  },
+  {
+    question: "How can I participate in IPR Training and Workshops?",
+    answer:
+      "Keep an eye on our announcements for upcoming training sessions and workshops. You can register for these events to enhance your understanding of intellectual property, its importance, and best practices.",
+  },
+  {
+    question: "What is Freedom to Operate (FTO) Analysis, and why is it important?",
+    answer:
+      "FTO Analysis ensures that a technology does not infringe existing patents or IP rights. It provides recommendations on mitigating patent infringement risk, allowing you to proceed confidently with your innovation.",
+  },
 ];
 
 const InnovationPage = () => {
